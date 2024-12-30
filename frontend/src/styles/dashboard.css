@@ -1,0 +1,265 @@
+/* Overall Dashboard Container */
+.dashboard-container {
+  padding: 20px; /* Padding around the container */
+  text-align: center; /* Center-align content */
+  position: relative;
+}
+
+/* Center Content */
+.center-content {
+  margin: 0 auto; /* Center content horizontally */
+}
+
+/* Title and Quote Styling */
+.dashboard-title {
+  font-size: 2rem;
+  color: #333;
+}
+
+.dashboard-quote {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Layout for Search and Calendar Panels */
+.content-layout {
+  display: flex;
+  justify-content: space-between; /* Space between panels */
+  gap: 20px; /* Gap between items */
+  margin-top: 20px;
+  padding: 0 40px; /* Side padding for spacing */
+}
+
+/* Clear Filters Button */
+.clear-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.clear-button:hover {
+  background-color: #0056b3;
+}
+
+/* Left Panel Styling (Search and Filters) */
+.left-panel {
+  position: relative;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  width: 75%; /* Panel width */
+  padding-bottom: 60px; /* Space for the Clear button */
+}
+
+/* Search Input Styling */
+.search-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding/border in width */
+}
+
+/* Filter Row for Dropdowns */
+.filter-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Wrap items if space is limited */
+}
+
+/* Dropdown Filters */
+.filter-select {
+  flex: 1; /* Each filter takes equal space */
+  min-width: 150px; /* Minimum width for dropdowns */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Right Panel for Calendar */
+.right-panel {
+  width: 40%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar Placeholder Box */
+.calendar-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* User Icon in the Top Right */
+.user-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff; /* Icon color */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 1000; /* Keep above other elements */
+}
+
+/* Sign Out Button in the Bottom Right */
+.sign-out-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff; /* Consistent blue color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000; /* Above other elements */
+}
+
+.sign-out-button:hover {
+  background-color: #0056b3; /* Darker on hover */
+}
+
+/* Trainer List Styling */
+.trainer-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.trainer-name {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  color: #333;
+}
+
+.trainer-name:hover {
+  background-color: #f0f0f0;
+}
+
+/* Overlay for Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999; /* Below modal but above main content */
+}
+
+/* Modal Styling for Account and Contact Card */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* Flex Layout for Label and Input/Select Row */
+.modal .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal label {
+  width: 40%;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.modal input,
+.modal select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Save, Close, and Delete Button Styling in Modal */
+.save-button,
+.modal .close-button,
+.modal .delete-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover,
+.modal .close-button:hover,
+.modal .delete-button:hover {
+  background-color: #0056b3;
+}
+
+/* Delete Button Specific Styling */
+.modal .delete-button {
+  background-color: #dc3545; /* Red for delete action */
+}
+
+.modal .delete-button:hover {
+  background-color: #a71d2a; /* Darker red on hover */
+}
+
+/* Trainer Contact Card Content Styling */
+.modal p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #555;
+}

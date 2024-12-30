@@ -1,0 +1,77 @@
+/* src/styles/signin.css */
+
+/* Page Body Styling */
+body {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+
+/* Container for Authentication Form */
+.auth-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Title Styling */
+.auth-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Layout */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Fields Styling */
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Submit Button Styling */
+.auth-submit-button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Text Below Form */
+.auth-text {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Link Styling for Navigation to Sign In/Up */
+.auth-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+    color: #0056b3;
+}
